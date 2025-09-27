@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <style>
+      :root {
+        --amnesia-white: #ffffff;
+        --amnesia-blue: #3a77ff;
+        --amnesia-black: #0a0a0a;
+      }
+    </style>
+  </defs>
+  <rect width="128" height="128" rx="24" fill="var(--amnesia-black)" />
+  <path d="M64 20L28 34v32c0 26 16 42 36 52c20-10 36-26 36-52V34L64 20z" fill="var(--amnesia-blue)"/>
+  <path d="M64 50c-10 0-18 8-18 18s8 18 18 18s18-8 18-18s-8-18-18-18zm0 28a10 10 0 1 1 0-20a10 10 0 0 1 0 20z" fill="var(--amnesia-white)"/>
+</svg>
