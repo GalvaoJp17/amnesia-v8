@@ -9,11 +9,14 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "clean": "rm -rf dist",
-    "dev": "npm run build -- --watch"
+    "dev": "npm run build -- --watch",
+    "test": "TS_NODE_PREFER_TS_EXTS=true ts-node --project tsconfig.test.json --esm test/llm.test.ts && npm run build && node test/meeting.test.mjs"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.254",
+    "@types/node": "^20.11.30",
     "esbuild": "^0.20.2",
+    "ts-node": "^10.9.2",
     "typescript": "^5.4.0"
   }
 }
