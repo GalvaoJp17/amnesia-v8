@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "Amnesia AI Shield v8",
+  "description": "Local-first protection for prompts and meetings.",
+  "version": "0.1.0",
+  "permissions": [
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://chat.openai.com/*",
+    "https://chatgpt.com/*",
+    "https://claude.ai/*",
+    "https://gemini.google.com/*",
+    "https://www.perplexity.ai/*",
+    "https://poe.com/*",
+    "https://grok.com/*",
+    "https://meet.google.com/*",
+    "https://*.zoom.us/*",
+    "https://teams.microsoft.com/*",
+    "https://*.webex.com/*",
+    "https://*.slack.com/*"
+  ],
+  "background": {
+    "service_worker": "background/index.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "ui/popup.html",
+    "default_title": "Amnesia AI Shield"
+  },
+  "icons": {
+    "128": "icons/shield.svg"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chat.openai.com/*",
+        "https://chatgpt.com/*",
+        "https://claude.ai/*",
+        "https://gemini.google.com/*",
+        "https://www.perplexity.ai/*",
+        "https://poe.com/*",
+        "https://grok.com/*"
+      ],
+      "js": ["content/llm/detector.js"],
+      "css": []
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["ui/popup.html", "icons/shield.svg", "styles/popup.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
