@@ -1,0 +1,2 @@
+{ "name": "amnesia-ai-shield-v8", "version": "8.0.0", "private": true,
+  "scripts": { "build": "echo \"(add builder later)\"", "test": "echo \"(add tests later)\"" } }
