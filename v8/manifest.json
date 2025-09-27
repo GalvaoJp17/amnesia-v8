@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Amnesia AI Shield",
+  "version": "8.0.0",
+  "action": { "default_popup": "popup.html" },
+  "permissions": ["scripting","storage"],
+  "host_permissions": [
+    "https://chat.openai.com/*",
+    "https://chatgpt.com/*",
+    "https://claude.ai/*",
+    "https://gemini.google.com/*",
+    "https://www.perplexity.ai/*",
+    "https://poe.com/*",
+    "https://grok.com/*",
+    "https://meet.google.com/*",
+    "https://*.zoom.us/*",
+    "https://teams.microsoft.com/*",
+    "https://*.webex.com/*",
+    "https://*.slack.com/*"
+  ],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [{
+    "matches": [
+      "https://chat.openai.com/*",
+      "https://chatgpt.com/*",
+      "https://claude.ai/*",
+      "https://gemini.google.com/*",
+      "https://www.perplexity.ai/*",
+      "https://poe.com/*",
+      "https://grok.com/*",
+      "https://meet.google.com/*",
+      "https://*.zoom.us/*",
+      "https://teams.microsoft.com/*",
+      "https://*.webex.com/*",
+      "https://*.slack.com/*"
+    ],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }]
+}
