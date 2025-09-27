@@ -1,0 +1,19 @@
+{
+  "name": "amnesia-ai-shield-v8",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "clean": "rm -rf dist",
+    "dev": "npm run build -- --watch"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.254",
+    "esbuild": "^0.20.2",
+    "typescript": "^5.4.0"
+  }
+}
